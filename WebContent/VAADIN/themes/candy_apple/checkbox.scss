@@ -1,0 +1,11 @@
+@mixin checkbox{}
+
+.v-checkbox > input:focus ~ label::before{
+	@include component_focus($main-background-color);/*
+	box-shadow: none !important;
+	border: 1px solid $theme-black-lime--component-border-color !important;*/
+}
+
+.v-checkbox > input:checked ~ label:after{
+	color: $secondary-color !important;
+}

@@ -1,0 +1,121 @@
+@mixin button($radius, $background-color, $color){	
+	background: $background-color;
+	@include gradient_backgound(top, darken($background-color, 10%), lighten($background-color, 10%));
+
+	border-radius: $radius;
+	border: none;
+	box-shadow: none;
+	
+	color: $color;
+}
+
+.v-button{
+	margin: 5px;
+	
+	&:hover:after{
+		background-color: transparent !important;
+	}
+}
+.v-button-link{
+	background: none !important;
+	margin: 0px !important;
+	border-radius: 0px !important;
+}
+.v-button-project-name{
+	text-align: left !important;
+
+	width: 181px !important;
+}
+.v-button-task-delete, 
+.v-button-project-delete, 
+.v-button-task-edit, 
+.v-button-project-edit{
+	padding: 0 !important;
+}
+
+
+/* Black Lime - Start */
+.v-ui.black_lime .v-button{
+	@include button(10px, $theme-black-lime--component-background-color, $theme-black-lime--main-color);
+	
+	&:focus:after{
+		@include component_focus($theme-black-lime--secondary-background-color);
+	}
+}
+
+.v-ui.black_lime .v-button-task-edit, 
+.v-ui.black_lime .v-button-project-edit{
+	@include sprites_with_hover(25px, 25px, 5px, -30px -201px, -30px -231px);
+}
+.v-ui.black_lime .v-button-task-delete, 
+.v-ui.black_lime .v-button-project-delete{
+	@include sprites_with_hover(16px, 16px, 9px, -35px -325px, -35px -355px);
+}
+.v-ui.black_lime .v-button-link.v-button-top-bar{
+	height: $theme-black-lime--component-height;
+	background: none;
+}
+#add-project{
+	width: 100%;
+}
+/*
+.v-ui.black_lime #add-task{
+	margin: 5px 0px 5px 0px;
+	padding-left: 35px;
+}*/
+.v-ui.black_lime #add-task, 
+.v-ui.black_lime #add-project{
+	@include sprites_with_hover_no_size(-30px -261px, -30px -291px);
+	padding-left: 35px;
+	height: 25px;
+	border-radius: 0;
+	text-align: left;
+	margin: 5px 0px 5px 0px;
+}
+
+
+/* Plain Grey - Start */
+
+.v-ui.plain_grey .v-button-task-edit, 
+.v-ui.plain_grey .v-button-project-edit{
+	@include sprites_with_hover(25px, 25px, 5px, 0px -201px, 0px -231px);
+}
+.v-ui.plain_grey .v-button-task-delete, 
+.v-ui.plain_grey .v-button-project-delete{
+	@include sprites_with_hover(25px, 25px, 5px, 0px -321px, 0px -351px);
+}
+
+/* Plain Grey - End */
+
+
+/* Dark Candy Apple - Start */
+
+.v-ui.candy_apple .v-button{
+	@include button(10px, $theme-candy-apple--main-background-color, $theme-candy-apple--main-color);
+	
+	margin: 5px;
+	
+	&:after{
+		border: none !important;
+		bottom: 0px !important;
+		left: 0px !important;
+		right: 0px !important;
+		top: 0px !important;
+	}
+	&:hover:after{
+		background-color: transparent !important;
+	}
+	&:focus:after{
+		/*box-shadow: 0 0 2px 2px $main-background-color;*/
+		@include component_focus($theme-candy-apple--main-background-color);
+	}
+}
+.v-ui.candy_apple .v-button-task-edit, 
+.v-ui.candy_apple .v-button-project-edit{
+	@include sprites_with_hover(25px, 25px, 5px, -60px -201px, -60px -231px);
+}
+.v-ui.candy_apple .v-button-task-delete, 
+.v-ui.candy_apple .v-button-project-delete{
+	@include sprites_with_hover(25px, 25px, 9px, -60px -320px, -60px -350px);
+}
+/* Dark Candy Apple - End */

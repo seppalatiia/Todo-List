@@ -1,0 +1,10 @@
+@mixin label{}
+
+.v-label{
+	padding: 5px 10px 5px 10px;
+	color: $main-color;
+}
+
+.v-label-user-greeting{
+	height: $component-height;
+}

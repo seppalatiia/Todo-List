@@ -1,0 +1,54 @@
+@mixin textfield{
+	
+}
+/* Also includes css for datefield and textarea*/
+.v-textfield, 
+.v-textarea{
+	box-shadow: none !important;
+	
+	width: $form-component-width !important;
+}
+
+/* Black Lime - Start */
+.v-ui.black_lime .v-textfield{
+	@include component_styling($theme-black-lime--component-height, $theme-black-lime--component-background-color, $theme-black-lime--main-color);
+}
+.v-ui.black_lime .v-textfield, 
+.v-ui.black_lime .v-textarea{
+	border: 1px solid $theme-black-lime--component-border-color !important;
+	
+	&:focus{
+    	@include component_focus($theme-black-lime--secondary-background-color);
+	}
+}
+
+.v-ui.black_lime .v-textfield-error,
+.v-ui.black_lime .v-textfield-error:focus{
+	@include component_focus(0, 0, 2px, 1px, $theme-black-lime--error-color);
+	border-color: $theme-black-lime--error-color !important;
+}
+.v-ui.black_lime.v-datefield [class*="button"]{
+	color: $theme-black-lime--main-color !important;
+}
+
+.v-ui.black_lime.v-textarea{
+	background-color: $theme-black-lime--component-background-color !important;
+	color: $theme-black-lime--main-color !important;
+}
+/* Black Lime - End */
+
+
+
+/* Dark Candy Apple - Start */
+
+.v-ui.candy_apple .v-textfield, 
+.v-ui.candy_apple .v-textarea{
+	&:focus{
+    	@include component_focus($theme-candy-apple--main-background-color);
+	}
+}
+.v-ui.candy_apple .v-textfield-error,
+.v-ui.candy_apple .v-textfield-error:focus{
+	background: lighten($theme-candy-apple--main-background-color, 63%) !important;
+}
+/* Dark Candy Apple - End */

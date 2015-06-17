@@ -1,0 +1,29 @@
+@mixin datefield{}
+
+.v-datefield [class*="button"]{
+	@include gradient_backgound_important(top, darken($main-background-color, 10%), lighten($main-background-color, 10%));
+	color: $main-color !important;
+}
+.v-datefield-calendarpanel-month{
+	color: $secondary-color;
+}
+.v-datefield-calendarpanel-day{
+	&:hover{
+		color: $secondary-color !important;
+	}
+}
+.v-datefield-calendarpanel-day-selected{
+	background: none !important;
+	background-color: $main-background-color !important;
+	color: $main-color !important;
+	&:hover{
+		color: darken($main-color, 15%) !important;
+	}
+}
+.v-datefield-calendarpanel-day-focused{
+	box-shadow: none !important;
+}
+.v-datefield-popup td[class*="year"] button:hover:before, 
+.v-datefield-popup td[class*="month"] button:hover:before{
+	color: $secondary-color !important;
+}

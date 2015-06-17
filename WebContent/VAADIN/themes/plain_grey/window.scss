@@ -1,0 +1,17 @@
+@mixin window{}
+
+.v-window-outerheader{
+	@include gradient_backgound_important(top, darken($main-background-color, 10%), lighten($main-background-color, 10%));
+}
+.v-window-header{
+	color: $secondary-color !important;
+}
+.v-window-maximizebox, 
+.v-window-restorebox, 
+.v-window-closebox{
+	background-color: transparent !important;
+	color: $secondary-color !important;
+}
+.v-window-resizebox{
+	@include sprites(16px, 16px, 0px, 0px 0px);
+}

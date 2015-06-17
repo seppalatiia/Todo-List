@@ -1,0 +1,35 @@
+@import "addons.scss";
+@import "black_lime.scss";
+@import "button.scss";
+@import "checkbox.scss";
+@import "datefield.scss";
+@import "filterselect.scss";
+@import "horizontallayout.scss";
+@import "label.scss";
+@import "layout.scss";
+@import "link.scss";
+@import "notification.scss";
+@import "table.scss";
+@import "text.scss";
+@import "textfield.scss";
+@import "window.scss";
+
+/* This file prefixes all rules with the theme name to avoid causing conflicts with other themes. */
+/* The actual styles should be defined in black_lime.scss */
+.black_lime {
+  @include addons;
+  @include black_lime;
+  @include button;
+  @include checkbox;
+  @include datefield;
+  @include filterselect;
+  @include horizontallayout;
+  @include label;
+  @include layout;
+  @include link;
+  @include notification;
+  @include table;
+  @include text;
+  @include textfield;
+  @include window;
+}

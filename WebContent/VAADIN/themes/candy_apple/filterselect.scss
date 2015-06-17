@@ -1,0 +1,13 @@
+@mixin filterselect{}
+
+.v-filterselect-input:focus{
+    @include component_focus($main-background-color);
+}
+.v-filterselect-button{
+	@include gradient_backgound_important(top, darken($main-background-color, 10%), lighten($main-background-color, 10%));
+	color: $main-color !important;
+}
+.v-filterselect-suggestpopup .gwt-MenuItem-selected{
+	background: $main-background-color !important;
+	color: $main-color !important;
+}

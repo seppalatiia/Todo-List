@@ -1,0 +1,28 @@
+@mixin link{
+	
+}
+.v-button-link, 
+.v-link{
+	display: inline-block;
+}
+.v-link{
+	margin: 5px;
+}
+
+.v-ui.black_lime .v-button-link, 
+.v-ui.black_lime .v-link{
+	color: $theme-black-lime--secondary-color;
+	
+	&:hover{
+		color: darken($theme-black-lime--secondary-color, 15%);
+	}
+}
+
+.v-ui.candy_apple .v-button-link, 
+.v-ui.candy_apple .v-link{
+	color: $theme-candy-apple--secondary-color !important;
+	
+	&:hover{
+		color: lighten($theme-candy-apple--secondary-color, 25%) !important;
+	}
+}

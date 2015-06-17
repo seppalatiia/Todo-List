@@ -1,0 +1,71 @@
+/*
+	This theme has very minimal styling
+	
+	NOTE:
+	- This file includes the window resizer
+*/
+
+$main-background-color:	#464646;	/* a shade of grey */
+
+$secondary-color:		#FFFFFF;
+
+$form-component-width:	230px;
+$form-caption-width:	160px;
+
+@import "../valo/valo.scss";
+
+@mixin plain_grey {
+  @include valo;
+
+  // Insert your own theme rules here
+}
+
+/*
+	Gradient backgrounds
+*/
+@mixin gradient_backgound_important($direction, $top, $bottom){ /* Needed in table.scss */
+	background: -webkit-linear-gradient($direction, $top, $bottom) !important;
+	background: -moz-linear-gradient($direction, $top, $bottom) !important;
+	background: -ms-linear-gradient($direction, $top, $bottom) !important;
+	background: -o-linear-gradient($direction, $top, $bottom) !important; 
+}
+/*
+	End of Gradient backgrounds
+*/
+
+/*
+	Sprites
+*/
+@mixin sprites($height, $width, $margin, $position){
+	height: $height !important;
+	width: $width !important;
+	
+	margin: $margin !important;
+	
+	background: transparent url('images/sprites.png') no-repeat $position !important;
+}
+
+@mixin sprites_with_hover($height, $width, $margin, $position, $hover-position){
+	height: $height !important;
+	width: $width !important;
+	
+	margin: $margin !important;
+	
+	background: transparent url('images/sprites.png') no-repeat $position !important;
+	
+	&:hover{
+		background-position: $hover-position !important;
+	}
+}
+/*
+	End of Sprites
+*/
+
+.v-textfield, 
+.v-textarea{
+	width: $form-component-width !important;
+}
+
+.v-link{
+	margin: 5px;
+}

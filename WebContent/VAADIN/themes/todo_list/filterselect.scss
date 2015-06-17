@@ -1,0 +1,41 @@
+@mixin filterselect{}
+
+.v-ui.black_lime .v-filterselect{
+	@include component_styling($theme-black-lime--component-height, $theme-black-lime--component-background-color, $theme-black-lime--main-color);
+	
+	box-shadow: none !important;
+	
+	.v-filterselect-input{
+		background: inherit !important;
+		color: inherit !important;
+		box-shadow: inherit !important;
+		border: 1px solid $theme-black-lime--component-border-color !important;
+		
+		&:focus{	
+    		@include component_focus($theme-black-lime--secondary-background-color);
+		}
+	}
+	
+	.v-filterselect-button{
+		border-left: 1px solid $theme-black-lime--component-border-color !important;
+		border-radius: 0 20px 20px 0 !important;
+	}
+}
+/* Black Lime - End */
+
+
+/* Dark Candy Apple - Start */
+
+.v-ui.candy_apple .v-filterselect-input:focus{
+    @include component_focus($theme-candy-apple--main-background-color);
+}
+.v-ui.candy_apple .v-filterselect-button{
+	@include gradient_backgound_important(top, darken($theme-candy-apple--main-background-color, 10%), lighten($theme-candy-apple--main-background-color, 10%));
+	color: $theme-candy-apple--main-color !important;
+}
+.v-ui.candy_apple .v-filterselect-suggestpopup .gwt-MenuItem-selected{
+	background: $theme-candy-apple--main-background-color !important;
+	color: $theme-candy-apple--main-color !important;
+}
+
+/* Dark Candy Apple - End */

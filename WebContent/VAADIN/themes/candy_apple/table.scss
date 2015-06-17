@@ -1,0 +1,23 @@
+@mixin table{}
+
+.v-table-header-wrap{
+	/*background-image: none;*/
+	@include gradient_backgound_important(top, darken($main-background-color, 10%), lighten($main-background-color, 10%));
+	color: $main-color !important;
+	/*border: 1px solid $component-border-color !important;*/
+}
+
+.v-table-column-selector{
+	background: $main-background-color !important;
+	color: $main-color !important;
+	border: 1px solid $main-background-color !important;
+	box-shadow: none !important;
+}
+.v-table-row {
+	
+	background: #FFFFFF !important;
+}
+.v-table-row-odd {
+	
+	background: lighten($main-background-color, 63%) !important;
+}

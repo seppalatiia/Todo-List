@@ -1,0 +1,21 @@
+@mixin label{}
+
+.v-label{
+	padding: 5px 10px 5px 10px;
+}
+
+.v-ui.black_lime .v-label{
+	color: $theme-black-lime--main-color;
+}
+.v-ui.black_lime .v-label-user-greeting{
+	color: $theme-black-lime--main-color;
+}
+
+.v-ui.plain_prey .v-label-user-greeting, 
+.v-ui.plain_prey .v-label-footer{
+	color: $theme-plain-grey--secondary-color;
+}
+
+.v-ui.candy_apple .v-label-user-greeting{
+	height: $theme-candy-apple--top-bar-height;
+}

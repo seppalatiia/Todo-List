@@ -1,0 +1,74 @@
+
+$main-background-color:			#A40000;	/* also known as dark candy apple */
+$secondary-background-color:	#FFFFFF;	/* also known as white */
+
+$main-color:					#FFFFFF;	/* also known as white */
+$secondary-color:				#A40000;	/* also known as dark candy apple */
+
+$top-bar-height:				37px;
+$stripes-height:				10px;
+
+$form-component-width:			230px;
+$form-caption-width:			160px;
+
+@import "../valo/valo.scss";
+
+@mixin candy_apple {
+  @include valo;
+
+  // Insert your own theme rules here
+}
+
+.v-ui{
+	background: $main-background-color;
+}
+
+
+/*
+	Gradient backgrounds
+*/
+@mixin gradient_backgound_important($direction, $top, $bottom){
+	background: -webkit-linear-gradient($direction, $top, $bottom) !important;
+	background: -moz-linear-gradient($direction, $top, $bottom) !important;
+	background: -ms-linear-gradient($direction, $top, $bottom) !important;
+	background: -o-linear-gradient($direction, $top, $bottom) !important; 
+}
+/*
+	End of Gradient backgrounds
+*/
+
+/*
+	Component styling
+	This mixin handles styling for textfields, comboboxes
+*/
+@mixin component_focus($focus-color){
+	border: 1px solid $focus-color !important;
+	box-shadow: 0 0 2px 1px $focus-color !important;
+}
+
+/*
+	Sprites
+*/
+@mixin sprites($height, $width, $margin, $position){
+	height: $height !important;
+	width: $width !important;
+	
+	margin: $margin !important;
+	
+	background: transparent url('images/sprites.png') no-repeat $position !important;
+}
+@mixin sprites_with_hover($height, $width, $margin, $position, $hover-position){
+	height: $height !important;
+	width: $width !important;
+	
+	margin: $margin !important;
+	
+	background: transparent url('images/sprites.png') no-repeat $position !important;
+	
+	&:hover{
+		background-position: $hover-position !important;
+	}
+}
+/*
+	End of Sprites
+*/

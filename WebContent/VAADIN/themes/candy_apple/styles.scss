@@ -1,0 +1,35 @@
+@import "addons.scss";
+@import "candy_apple.scss";
+
+@import "button.scss";
+@import "checkbox.scss";
+@import "datefield.scss";
+@import "filterselect.scss";
+@import "horizontallayout.scss";
+@import "label.scss";
+@import "layout.scss";
+@import "link.scss";
+@import "notification.scss";
+@import "table.scss";
+@import "textfield.scss";
+@import "window.scss";
+
+/* This file prefixes all rules with the theme name to avoid causing conflicts with other themes. */
+/* The actual styles should be defined in candy_apple.scss */
+.candy_apple {
+  @include addons;
+  @include candy_apple;
+  
+  @include button;
+  @include checkbox;
+  @include datefield;
+  @include filterselect;
+  @include horizontallayout;
+  @include label;
+  @include layout;
+  @include link;
+  @include notification;
+  @include table;
+  @include textfield;
+  @include window;
+}

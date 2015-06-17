@@ -1,0 +1,15 @@
+@mixin link{}
+
+.v-button-link, 
+.v-link{
+	display: inline-block;
+	color: $secondary-color !important;
+	
+	&:hover{
+		color: lighten($secondary-color, 25%) !important;
+	}
+}
+
+.v-link{
+	margin: 5px;
+}

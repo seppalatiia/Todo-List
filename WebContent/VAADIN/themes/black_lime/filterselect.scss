@@ -1,0 +1,32 @@
+@mixin filterselect{}
+
+.v-filterselect{
+	@include component_styling($component-height, $component-background-color, $main-color);
+	
+	box-shadow: none !important;
+	
+	.v-filterselect-input{
+		background: inherit !important;
+		color: inherit !important;
+		box-shadow: inherit !important;
+		border: 1px solid $component-border-color !important;
+		
+		&:focus{	
+    		@include component_focus($secondary-background-color);
+		}
+	}
+	
+	.v-filterselect-button{
+		border-left: 1px solid $component-border-color !important;
+		border-radius: 0 20px 20px 0 !important;
+	}
+}
+
+.v-filterselect-suggestpopup .v-filterselect-suggestmenu{
+	background: $component-background-color !important;
+	color: $main-color !important;
+}
+.v-filterselect-suggestpopup .gwt-MenuItem-selected{
+	background: $secondary-background-color !important;
+	color: $component-border-color !important;
+}

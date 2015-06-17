@@ -1,0 +1,34 @@
+@mixin notification{
+	
+}
+
+/*.v-Notification{
+	@include component_focus(0, 0, 5px, 3px, $error-color);
+	
+	background: $component-background-color !important;
+	color: $main-color;
+}*/
+.v-Notification-system{
+	width: 100%;
+}
+.v-Notification .popupContent .gwt-HTML{
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+	
+	h1{
+		font-size: 28px;
+		line-height: 200%;
+		text-align: center;
+		color: $secondary-color !important;
+	}
+	
+	p, li{
+		margin-left: 10px;
+		text-align: left;
+	}
+}
+
+.v-tooltip .popupContent .v-errormessage{
+	color: $secondary-color !important;
+}

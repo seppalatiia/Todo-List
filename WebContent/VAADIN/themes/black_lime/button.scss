@@ -1,0 +1,61 @@
+@mixin button($radius, $background-color, $color){
+	background: $background-color !important;
+	@include gradient_backgound_important(top, darken($background-color, 10%), lighten($background-color, 10%));
+	
+	border-radius: $radius !important;
+	border: none !important;
+	box-shadow: none !important;
+	
+	color: $color !important;
+}
+
+.v-button{
+	@include button(10px, $component-background-color, $main-color);
+	
+	margin: 5px;
+	
+	&:hover:after{
+		background-color: transparent !important;
+	}
+	&:focus:after{
+		@include component_focus($secondary-background-color);
+	}
+}
+.v-button-link{
+	/* The coloring is done in link.scss */
+	background: none !important;
+	margin: 0px !important;
+	border-radius: 0px !important;
+}
+
+.v-button-task-delete, 
+.v-button-project-delete, 
+.v-button-task-edit, 
+.v-button-project-edit{
+	padding: 0 !important;
+}
+.v-button-project-name{
+	text-align: left !important;
+
+	width: 181px !important;
+}
+.v-button-task-edit, 
+.v-button-project-edit{
+	@include sprites_with_hover(25px, 25px, 5px, -30px -201px, -30px -231px);
+}
+.v-button-task-delete, 
+.v-button-project-delete{
+	@include sprites_with_hover(16px, 16px, 9px, -35px -325px, -35px -355px);
+}
+#add-project{
+	width: 100%;
+}
+#add-task, 
+#add-project{
+	@include sprites_with_hover_no_size(-30px -261px, -30px -291px);
+	padding-left: 35px;
+	height: 25px !important;
+	border-radius: 0 !important;
+	text-align: left !important;
+	margin: 5px 0px 5px 0px !important;
+}

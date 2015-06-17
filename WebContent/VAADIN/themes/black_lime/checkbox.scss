@@ -1,0 +1,16 @@
+@mixin checkbox{}
+
+.v-checkbox label{
+	color: $main-color;
+}
+.v-checkbox > input ~ label:before{
+	background: $component-background-color !important;
+	box-shadow: none !important;
+	border: 1px solid $component-border-color !important;
+}
+.v-checkbox > input ~ label:after{
+	
+}
+.v-checkbox > input:checked ~ label:after{
+	color: $secondary-color !important;
+}

@@ -1,0 +1,118 @@
+@mixin layout_black_lime{}
+
+/*
+	In this file we have the rules that places items to their right places
+	Mainly footer to the bottom of the page in all situations
+*/
+.v-customcomponent, 
+.v-customlayout-view{
+    height: 100% !important;
+	overflow: auto;
+}
+.v-customlayout-content-container{
+	margin: auto;
+}
+.v-horizontallayout-top-bar{
+	justify-content: flex-end;
+}
+.content{
+	justify-content: center;
+}
+.wrapper {
+	min-height: 100%;
+	height: 100%;
+	height: auto !important;
+}
+.top-bar, .footer, .stripes, .push{
+	width: 100%;
+}
+.footer{
+	justify-content: space-around;
+	align-items: flex-end;
+}
+.top-bar, 
+.content, 
+.footer{
+	@include horizontallayout;
+}
+
+/* Plain Grey - Start */
+.v-ui.plain_grey .wrapper {
+	margin-top: -37px;		/*This has to be same as the top-bars height*/
+	margin-bottom: -37px;	/*This has to be same as the footers height*/
+}
+.v-ui.plain_grey .top-bar, 
+.v-ui.plain_grey .footer, 
+.v-ui.plain_grey .push{
+	height: 37px;
+}
+.v-ui.plain_grey .top-bar,
+.v-ui.plain_grey .footer{
+	@include gradient_backgound_important(top, darken($theme-plain-grey--main-background-color, 10%), lighten($theme-plain-grey--main-background-color, 10%));
+}
+/* Plain Grey - End */
+
+
+
+/* Black Lime - Start */
+.v-ui.black_lime .wrapper {
+	margin-top:		-$theme-black-lime--component-height - $theme-black-lime--stripes-height;		/*This has to be same as the top-bars height*/
+	margin-bottom:	-$theme-black-lime--component-height - $theme-black-lime--stripes-height;	/*This has to be same as the footers height*/
+}
+.v-ui.black_lime .stripes{
+	height: $theme-black-lime--stripes-height;
+}
+.v-ui.black_lime .stripes.top{
+	@include gradient_backgound_important(top, $theme-black-lime--main-background-color, $theme-black-lime--secondary-background-color);
+}
+.v-ui.black_lime .stripes.bottom{
+	@include gradient_backgound_important(bottom, $theme-black-lime--main-background-color, $theme-black-lime--secondary-background-color);
+}
+.v-ui.black_lime .top-bar, 
+.v-ui.black_lime .footer{
+	height: $theme-black-lime--component-height;
+}
+.v-ui.black_lime .push{
+	height: $theme-black-lime--component-height + $theme-black-lime--stripes-height;
+}
+.top-bar, 
+.footer{
+	height: $theme-black-lime--component-height;
+	background: $theme-black-lime--main-background-color;
+}
+/* Black Lime - End */
+
+/* ------------------------------------------------------------------------------------------ */
+
+/* Dark Candy Apple - Start */
+.v-ui.candy_apple .v-customlayout-content-container{
+	background: $theme-candy-apple--secondary-background-color;
+
+	margin-top: 5px !important;
+	margin-bottom: 5px !important;
+	
+	padding: 10px !important;
+	width: 420px !important;
+}
+.v-ui.candy_apple .v-customlayout-content-container.main-view{
+	width: 1020px !important;
+	padding: 10px !important;
+}
+.v-ui.candy_apple .wrapper {
+	margin-top: 	-$theme-candy-apple--top-bar-height - $theme-candy-apple--stripes-height;		/*This has to be same as the top-bars height*/
+	margin-bottom:	-$theme-candy-apple--top-bar-height - $theme-candy-apple--stripes-height;		/*This has to be same as the footers height*/
+}
+.v-ui.candy_apple .top-bar, 
+.v-ui.candy_apple .footer{
+	height: $theme-candy-apple--top-bar-height;
+	background: $theme-candy-apple--secondary-background-color !important;
+	box-shadow: 0 0 2px 2px $theme-candy-apple--secondary-background-color;
+}
+.v-ui.candy_apple .push{
+	height: $theme-candy-apple--top-bar-height + $theme-candy-apple--stripes-height;
+}
+.v-ui.candy_apple .stripes{
+	height: $theme-candy-apple--stripes-height;
+	background-image: repeating-linear-gradient(-45deg, transparent, transparent 5px, rgba(255,255,255,1) 5px, rgba(255,255,255,1) 10px);
+}
+/* Dark Candy Apple - End */

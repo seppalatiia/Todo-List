@@ -1,0 +1,15 @@
+@mixin text{}
+
+.v-ui.black_lime h1{
+	color: $theme-black-lime--main-color;
+	text-shadow: rgba(0, 0, 0, .4) 0 1px 0;
+}
+
+.v-ui.black_lime .v-caption{
+	color: $theme-black-lime--main-color;
+}
+
+.v-ui.black_lime .v-required-field-indicator,
+.v-ui.black_lime .v-errorindicator{
+	color: $theme-black-lime--error-color !important;
+}

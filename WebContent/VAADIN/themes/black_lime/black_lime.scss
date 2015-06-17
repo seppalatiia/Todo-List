@@ -1,0 +1,137 @@
+// Global variable overrides. Must be declared before importing Valo.
+
+// Defines the plaintext font size, weight and family. Font size affects general component sizing.
+//$v-font-size: 16px;
+//$v-font-weight: 300;
+//$v-font-family: "Open Sans", sans-serif;
+
+// Defines the border used by all components.
+//$v-border: 1px solid (v-shade 0.7);
+//$v-border-radius: 4px;
+
+// Affects the color of some component elements, e.g Button, Panel title, etc
+//$v-background-color: hsl(210, 0%, 98%);
+// Affects the color of content areas, e.g  Panel and Window content, TextField input etc
+//$v-app-background-color: $v-background-color;
+
+// Affects the visual appearance of all components
+//$v-gradient: v-linear 8%;
+//$v-bevel-depth: 30%;
+//$v-shadow-opacity: 5%;
+
+// Defines colors for indicating status (focus, success, failure)
+//$v-focus-color: valo-focus-color(); // Calculates a suitable color automatically
+//$v-friendly-color: #2c9720;
+//$v-error-indicator-color: #ed473b;
+
+// For more information, see: https://vaadin.com/book/-/page/themes.valo.html
+// Example variants can be copy/pasted from https://vaadin.com/wiki/-/wiki/Main/Valo+Examples
+
+$main-background-color:			#000000; 	/* also known as black */
+$secondary-background-color:	#32CD32;	/* also known as lime green */
+
+$component-background-color:	#222222;	/* a shade of grey */
+$component-border-color:		#111111;	/* a shade of grey */
+$component-height:				35px;		/* height of the component */
+$stripes-height:				15px;		/* height of the stripes */
+
+$main-color:					#CCCCCC;	/* a shade of grey */
+$secondary-color:				#32CD32;	/* also known as lime green */
+
+$error-color:					#FF0066;	/* also known as neon pink */
+
+
+$form-component-width:			230px;
+$form-caption-width:			160px;
+
+@import "../valo/valo.scss";
+
+@mixin black_lime {
+  @include valo;
+
+  // Insert your own theme rules here
+}
+.v-ui{
+	background: $main-background-color;
+}
+
+/*
+	Gradient backgrounds
+*/
+@mixin gradient_backgound($direction, $top, $bottom){
+	background: -webkit-linear-gradient($direction, $top, $bottom);
+	background: -moz-linear-gradient($direction, $top, $bottom);
+	background: -ms-linear-gradient($direction, $top, $bottom);
+	background: -o-linear-gradient($direction, $top, $bottom); 
+}
+
+@mixin gradient_backgound_important($direction, $top, $bottom){ /* Needed in table.scss */
+	background: -webkit-linear-gradient($direction, $top, $bottom) !important;
+	background: -moz-linear-gradient($direction, $top, $bottom) !important;
+	background: -ms-linear-gradient($direction, $top, $bottom) !important;
+	background: -o-linear-gradient($direction, $top, $bottom) !important; 
+}
+
+@mixin gradient_backgound_thin_bottom($direction, $top, $bottom){
+	background: -webkit-linear-gradient($direction, $top, $top, $top, $bottom);
+	background: -moz-linear-gradient($direction, $top, $top, $top, $bottom);
+	background: -ms-linear-gradient($direction, $top, $top, $top, $bottom);
+	background: -o-linear-gradient($direction, $top, $top, $top, $bottom); 
+}
+/*
+	End of Gradient backgrounds
+*/
+
+/*
+	Component styling
+	This mixin handles styling for textfields, comboboxes
+*/
+@mixin component_styling($height, $background-color, $color){
+	height: $height !important;
+	background-color: $background-color !important;
+	color: $color !important;
+	border-radius: 20px !important;
+}
+@mixin component_focus($focus-color){
+	border-color: $focus-color !important;
+	box-shadow: 0 0 2px 1px $focus-color !important;
+}
+/*
+	End of Component styling
+*/
+
+/*
+	Sprites
+*/
+@mixin sprites($height, $width, $margin, $position){
+	height: $height !important;
+	width: $width !important;
+	
+	margin: $margin !important;
+	
+	background: transparent url('images/sprites.png') no-repeat $position !important;
+}
+
+@mixin sprites_with_hover($height, $width, $margin, $position, $hover-position){
+	height: $height !important;
+	width: $width !important;
+	
+	margin: $margin !important;
+	
+	background: transparent url('images/sprites.png') no-repeat $position !important;
+	
+	&:hover{
+		background-position: $hover-position !important;
+	}
+}
+
+@mixin sprites_with_hover_no_size($position, $hover-position){
+	background: transparent url('images/sprites.png') no-repeat $position !important;
+	
+	&:hover{
+		background-position: $hover-position !important;
+	}
+}
+/*
+	End of Sprites
+*/

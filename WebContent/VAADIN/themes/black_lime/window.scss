@@ -1,0 +1,35 @@
+@mixin window{}
+
+.v-window-outerheader{
+	@include gradient_backgound_thin_bottom(top, $main-background-color, $secondary-background-color);
+	height: 40px;
+}
+.v-window-header{
+	color: $main-color !important;
+}
+.v-window-contents{
+	background: $main-background-color;
+	
+	.v-scrollable:before{
+		border: none !important;
+	}
+}
+.v-window-closebox, 
+.v-window-maximizebox, 
+.v-window-restorebox{
+	&:before{
+		content: none !important;
+	}
+}
+.v-window-maximizebox{
+	@include sprites_with_hover(16px, 16px, 7px, -30px -90px, -30px -120px);
+}
+.v-window-restorebox{
+	@include sprites_with_hover(16px, 16px, 7px, -30px -150px, -30px -180px);
+}
+.v-window-closebox{
+	@include sprites_with_hover(16px, 16px, 7px, -30px -30px, -30px -60px);
+}
+.v-window-resizebox{
+	@include sprites(16px, 16px, 0px, -30px 0px);
+}

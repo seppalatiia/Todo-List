@@ -1,0 +1,56 @@
+@mixin datefield{}
+
+.v-datefield [class*="button"]{
+	color: $main-color !important;
+}
+.v-datefield-popup{
+	background-color: $component-background-color !important;
+}
+.v-datefield-calendarpanel-month{
+	color: $secondary-color;
+}
+.v-datefield-calendarpanel-weekdays td{
+	color: $main-color !important;
+}
+.v-button-prevmonth,
+.v-datefield-popup td[class*="year"] button, 
+.v-datefield-popup td[class*="month"] button,
+.v-datefield-calendarpanel-prevyear, 
+.v-datefield-calendarpanel-prevmonth,
+.v-datefield-calendarpanel-nextmonth,
+.v-datefield-calendarpanel-nextyear{
+	background-color: $component-background-color !important;
+	color: $main-color;
+	&:before{
+	color: $main-color;
+	}
+	&:hover:before{
+		color: $secondary-color !important;
+	}
+}
+.v-datefield-calendarpanel-day{
+	background-color: $component-background-color !important;
+	color: $main-color;
+	&:hover{
+		color: $secondary-color !important;
+	}
+}
+.v-datefield-calendarpanel-day-selected{
+	background: none !important;
+	background-color: $secondary-background-color !important;
+	color: $component-border-color !important;
+	&:hover{
+		color: $component-border-color !important;
+	}
+}
+.v-datefield-calendarpanel-day-focused{
+	@include component_focus($secondary-background-color);
+}
+.v-datefield-calendarpanel-day.v-datefield-calendarpanel-day-offmonth{
+	background: $secondary-border-color !important;
+}
+.v-datefield-error .v-textfield:focus, 
+.v-datefield-error .v-textfield{
+	@include component_focus($error-color);
+	border-color: $error-color !important;
+}

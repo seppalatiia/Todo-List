@@ -1,0 +1,31 @@
+@mixin checkbox{}
+
+
+/* Black Lime - Start */
+
+.v-ui.black_lime .v-checkbox label{
+	color: $theme-black-lime--main-color;
+}
+.v-ui.black_lime .v-checkbox > input ~ label:before{
+	background: $theme-black-lime--component-background-color !important;
+	box-shadow: none !important;
+	border: 1px solid $theme-black-lime--component-border-color !important;
+}
+.v-ui.black_lime .v-checkbox > input ~ label:after{}
+.v-ui.black_lime .v-checkbox > input:checked ~ label:after{
+	color: $theme-black-lime--secondary-color !important;
+}
+
+/* Black Lime - End */
+
+
+/* Dark Candy Apple - Start */
+
+.v-ui.candy_apple .v-checkbox > input:focus ~ label::before{
+	@include component_focus($theme-candy-apple--main-background-color);
+}
+.v-ui.candy_apple .v-checkbox > input:checked ~ label:after{
+	color: $theme-candy-apple--secondary-color !important;
+}
+
+/* Dark Candy Apple - End */

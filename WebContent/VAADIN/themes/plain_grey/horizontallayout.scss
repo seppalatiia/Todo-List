@@ -1,0 +1,62 @@
+@mixin horizontallayout{
+	display: flex;
+	flex-direction: row;
+}
+
+.v-horizontallayout{
+	@include horizontallayout;
+	
+	justify-content: center;
+	align-items: center;
+}
+
+.horizontallayout{
+	@include horizontallayout;
+}
+.project-list{
+	margin-top: 5px;
+}
+.horizontallayout-space-between{
+	
+	@include horizontallayout;
+	
+	justify-content: space-between;
+	align-items: center;
+	
+	.v-captionwrapper{
+		@include horizontallayout;
+	
+		justify-content: space-between;
+		align-items: center;
+		
+		.v-caption{
+			min-width: $form-caption-width;
+		}
+	}
+}
+.horizontallayout-center{
+	@include horizontallayout;
+	
+	justify-content: center;
+	align-items: center;
+}
+
+.form-row{
+	padding: 5px;
+	max-width: 400px;
+	margin: auto;
+}
+.horizontallayout-end{
+	@include horizontallayout;
+	
+	justify-content: flex-end;
+	align-items: center;
+	
+	.v-checkbox{
+		width: $form-component-width !important;
+		
+		label{
+			white-space: normal;
+		}
+	}
+}

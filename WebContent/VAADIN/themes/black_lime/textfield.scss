@@ -1,0 +1,28 @@
+@mixin textfield{}
+/* Also includes css for textarea*/
+
+.v-textfield{
+	@include component_styling($component-height, $component-background-color, $main-color);
+}
+.v-textfield, 
+.v-textarea{
+	border: 1px solid $component-border-color !important;
+	box-shadow: none !important;
+	
+	width: $form-component-width !important;
+	
+	&:focus{
+    	@include component_focus($secondary-background-color);
+	}
+}
+
+.v-textfield-error,
+.v-textfield-error:focus{
+	@include component_focus($error-color);
+	border-color: $error-color !important;
+}
+
+.v-textarea{
+	background-color: $component-background-color !important;
+	color: $main-color !important;
+}

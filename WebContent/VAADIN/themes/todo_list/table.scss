@@ -1,0 +1,74 @@
+@mixin table{}
+
+.v-ui.black_lime .v-table {
+	color: $theme-black-lime--main-color !important;
+	background: $theme-black-lime--main-background-color !important;
+	margin-bottom: 10px;
+}
+.v-ui.black_lime .v-table-header-wrap{
+	background-image: none;
+	@include gradient_backgound_important(top, darken($theme-black-lime--component-background-color, 10%), lighten($theme-black-lime--component-background-color, 10%));
+	border: 1px solid $theme-black-lime--component-border-color !important;
+}
+.v-ui.black_lime .v-table-header {
+	box-shadow: 0 0 0 1px $theme-black-lime--component-border-color !important;
+}
+.v-ui.black_lime .v-table-header-cell {}
+.v-ui.black_lime .v-table-resizer {} /* Column resizer handle. */
+.v-ui.black_lime .v-table-caption-container {
+	border-left: 1px solid $theme-black-lime--component-border-color !important;
+}
+.v-ui.black_lime .v-table-body {
+	border: 1px solid $theme-black-lime--component-border-color !important;
+}
+.v-ui.black_lime .v-ui.black_lime .v-table-row-spacer {}
+.v-ui.black_lime .v-ui.black_lime .v-table-table {
+	box-shadow: 0 0 0 1px $theme-black-lime--component-border-color !important;
+}
+.v-ui.black_lime .v-table-table tr:first-child td{
+	border-top: medium none !important;
+}
+.v-ui.black_lime .v-table-table td{
+	border-top: 1px solid $theme-black-lime--component-border-color !important;
+}
+.v-ui.black_lime .v-table-row {
+	background: $theme-black-lime--main-background-color !important;
+}
+.v-ui.black_lime .v-table-row-odd {
+	background: $theme-black-lime--component-background-color !important;
+}
+.v-ui.black_lime .v-table-cell-content {
+	border-left: 1px solid $theme-black-lime--component-border-color !important;
+}
+.v-ui.black_lime .v-table-cell-content:first-child{
+	border-left: medium none !important;
+}
+.v-ui.black_lime .v-table-column-selector{
+	background: $theme-black-lime--main-background-color !important;
+	color: $theme-black-lime--main-color !important;
+	border: 1px solid $theme-black-lime--main-background-color !important;
+	box-shadow: none !important;
+}
+
+
+/* Dark Candy Apple - Start */
+
+.v-ui.candy_apple .v-table-header-wrap{
+	/*background-image: none;*/
+	@include gradient_backgound_important(top, darken($theme-candy-apple--main-background-color, 10%), lighten($theme-candy-apple--main-background-color, 10%));
+	color: $theme-candy-apple--main-color !important;
+}
+
+.v-ui.candy_apple .v-table-column-selector{
+	background: $theme-candy-apple--main-background-color !important;
+	color: $theme-candy-apple--main-color !important;
+	border: 1px solid $theme-candy-apple--main-background-color !important;
+	box-shadow: none !important;
+}
+.v-ui.candy_apple .v-table-row {
+	background: $theme-candy-apple--secondary-background-color !important;
+}
+.v-ui.candy_apple .v-table-row-odd {
+	background: lighten($theme-candy-apple--main-background-color, 63%) !important;
+}
+/* Dark Candy Apple - End */

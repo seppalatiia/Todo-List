@@ -1,0 +1,21 @@
+@import "addons.scss";
+@import "plain_grey.scss";
+
+@import "button.scss";
+@import "horizontallayout.scss";
+@import "label.scss";
+@import "layout.scss";
+@import "window.scss";
+
+/* This file prefixes all rules with the theme name to avoid causing conflicts with other themes. */
+/* The actual styles should be defined in plain_grey.scss */
+.plain_grey {
+  @include addons;
+  @include plain_grey;
+  
+  @include button;
+  @include horizontallayout;
+  @include label;
+  @include layout;
+  @include window;
+}

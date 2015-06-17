@@ -1,0 +1,61 @@
+@mixin table{}
+
+.v-table {
+	color: $main-color !important;
+	background: $main-background-color !important;
+	margin-bottom: 10px;
+}
+.v-table-header-wrap{
+	/*background-image: none;*/
+	@include gradient_backgound_important(top, darken($component-background-color, 10%), lighten($component-background-color, 10%));
+	border: 1px solid $component-border-color !important;
+}
+.v-table-header {
+	box-shadow: 0 0 0 1px $component-border-color !important;
+}
+.v-table-header-cell {}
+.v-table-resizer {} /* Column resizer handle. */
+.v-table-caption-container {
+	border-left: 1px solid $component-border-color !important;
+}
+.v-table-body {
+	border: 1px solid $component-border-color !important;
+}
+.v-table-row-spacer {}
+.v-table-table {
+	box-shadow: 0 0 0 1px $component-border-color !important;
+}
+.v-table-table tr:first-child td{
+	border-top: medium none !important;
+}
+.v-table-table td{
+	border-top: 1px solid $component-border-color !important;
+}
+.v-table-row {
+	background: $main-background-color !important;
+}
+.v-table-row-odd {
+	background: $component-background-color !important;
+}
+.v-table-cell-content {
+	border-left: 1px solid $component-border-color !important;
+}
+.v-table-cell-content:first-child{
+	border-left: medium none !important;
+}
+
+/* Column selector menu */
+.v-contextmenu{
+	background: $component-background-color !important;
+	color: $main-color !important;
+}
+.gwt-MenuItem-selected{
+	background: $secondary-background-color !important;
+	color: $component-border-color !important;
+}
+.v-table-column-selector{
+	background: $main-background-color !important;
+	color: $main-color !important;
+	border: 1px solid $main-background-color !important;
+	box-shadow: none !important;
+}

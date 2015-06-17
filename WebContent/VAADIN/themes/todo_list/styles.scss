@@ -1,0 +1,31 @@
+@import "addons.scss";
+@import "todo_list.scss";
+
+@import "button.scss";
+@import "checkbox.scss";
+@import "filterselect.scss";
+@import "horizontallayout.scss";
+@import "label.scss";
+@import "layout";
+@import "link.scss";
+@import "table.scss";
+@import "text.scss";
+@import "textfield.scss";
+
+/* This file prefixes all rules with the theme name to avoid causing conflicts with other themes. */
+/* The actual styles should be defined in todo_list.scss */
+.todo_list {
+  @include addons;
+  @include todo_list;
+  
+  @include button;
+  @include checkbox;
+  @include filterselect;
+  @include horizontallayout;
+  @include label;
+  @include layout;
+  @include link;
+  @include table;
+  @include text;
+  @include textfield;
+}

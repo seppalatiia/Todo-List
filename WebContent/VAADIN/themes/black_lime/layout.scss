@@ -1,0 +1,62 @@
+@mixin layout{}
+
+/*
+	In this file we have the rules that places items to their right places
+	Mainly the footer to the bottom of the page in all situations
+*/
+
+/*
+	FIXME If browsers width is less than 1000px horizontal overflow breaks
+*/
+.v-customcomponent, 
+.v-customlayout-view{
+    height: 100% !important;
+	overflow: auto;
+}
+.v-customlayout-content-container{
+	margin: auto;
+}
+
+.content{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.wrapper {
+	min-height: 100%;
+	height: 100%;
+	height: auto !important;
+	margin-top:		-$stripes-height - $component-height;		/*This has to be same as the top-bars height*/
+	margin-bottom:	-$stripes-height - $component-height;	/*This has to be same as the footers height*/
+}
+.stripes{
+	height: $stripes-height;
+}.stripes.top{
+	@include gradient_backgound_important(top, $main-background-color, $secondary-background-color);
+	
+}.stripes.bottom{
+	@include gradient_backgound_important(bottom, $main-background-color, $secondary-background-color);
+}
+.top-bar, 
+.footer, 
+.stripes, 
+.push{
+	width: 100%;
+}
+.top-bar, 
+.footer{
+	@include horizontallayout;
+	
+	height: $component-height;
+	background: $main-background-color;
+}
+.push{
+	height: $stripes-height + $component-height;
+}
+.footer{
+	justify-content: space-around;
+	align-items: flex-end;
+}
+.v-horizontallayout-top-bar{
+	justify-content: flex-end;
+}

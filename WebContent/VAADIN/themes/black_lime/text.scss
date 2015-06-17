@@ -1,0 +1,15 @@
+@mixin text{}
+
+h1{
+	color: $main-color !important;
+	text-shadow: rgba(0, 0, 0, .4) 0 1px 0;
+}
+
+.v-caption{
+	color: $main-color;
+}
+
+.v-required-field-indicator,
+.v-errorindicator{
+	color: $error-color !important;
+}
