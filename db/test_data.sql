@@ -2,8 +2,8 @@
 -- Dumping data for table todo_list.users: ~1 rows (approximately)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
-	(1, 'testi', 'testi.testaaja@dummy.test', '-38f12edae565caee457e1d591bb50adc10bab2ae'),
-	(2, 'tyhja', 'tyhja.testaaja@dummy.test', '-38f12edae565caee457e1d591bb50adc10bab2ae');
+	(1, 'test', 'test.tester@dummy.test', '-38f12edae565caee457e1d591bb50adc10bab2ae'),
+	(2, 'empty', 'empty.tester@dummy.test', '-38f12edae565caee457e1d591bb50adc10bab2ae');
 	
 -- Dumping data for table todolist.projects: ~6 rows (approximately)
 INSERT INTO `projects` (`id`, `uid`, `name`, `description`) VALUES
