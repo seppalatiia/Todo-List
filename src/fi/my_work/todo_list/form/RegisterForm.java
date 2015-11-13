@@ -241,6 +241,7 @@ public class RegisterForm extends CustomLayout implements Button.ClickListener, 
 	private void setIds() {
 		header.setId(T.system("ID_LABEL_HEADER"));
 		username.setId(T.system("ID_TEXTFIELD_USERNAME"));
+		emailAsUsername.setId(T.system("ID_CHECKBOX_EMAIL_AS_USERNAME"));
 		email.setId(T.system("ID_TEXTFIELD_EMAIL"));
         password.setId(T.system("ID_TEXTFIELD_PASSWORD"));
         confirmPassword.setId(T.system("ID_TEXTFIELD_CONFIRM_PASSWORD"));
@@ -272,13 +273,13 @@ public class RegisterForm extends CustomLayout implements Button.ClickListener, 
 		if (formValues[1].equals("true")) {
 			emailAsUsername.setValue(true);
 		}
-		if (formValues[1].length() != 0) {
+		if (formValues[2].length() != 0) {
 			email.setValue(formValues[2]);
 		}
-		if (formValues[2].length() != 0) {
+		if (formValues[3].length() != 0) {
 			password.setValue(formValues[3]);
 		}
-		if (formValues[3].length() != 0) {
+		if (formValues[4].length() != 0) {
 			confirmPassword.setValue(formValues[4]);
 		}
 	}
